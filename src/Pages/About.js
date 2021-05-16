@@ -9,11 +9,14 @@ function About() {
         <Title >About me</Title>
         <AboutContent >
             <ColumnLeft >
-                <img src="../images/phillip.jpg" alt=""/>
+                <img src="../images/simon-1.jpg" alt=""/>
             </ColumnLeft>
             <ColumnRight >
-                <Text >I'm Phillip and I'm a <span class="typing-2"></span></Text>
-                <p> Junior Software Developer dedicated to improving skills through hands-on learning and development work. Proficient in mobile and desktop development environments. Adept at using  C# Dot Net Core and other programming languages to produce clean code. Well-organized and collaborative team player with strong communication and analytical abilities.</p>
+                <Text >I'm Simon and I'm a <span class="typing-2"></span></Text>
+                <p> Software Developer dedicated to improving skills through hands-on 
+                learning and development work. Proficient in mobile and desktop development environments. 
+                Adept at using  Javascript and other programming languages to produce clean code.
+                 Well-organized and collaborative team player with strong communication and analytical abilities.</p>
                 <a href="#">Download CV</a>
             </ColumnRight>
         </AboutContent>
@@ -25,11 +28,12 @@ function About() {
 export default About
 const AboutSection =styled.section`
  padding: 100px 0;
- 
+
 h2{
     &::after{
   content:"who am i"
     }
+    overflow: hidden;
 }
 `;
 const MaxWidth =styled.div`
@@ -58,7 +62,7 @@ position: relative;
     &::before{
         content: "";
     position: absolute;
-    bottom: 0px;
+    bottom: 8px;
     left: 50%;
     width: 180px;
     height: 3px;
@@ -67,7 +71,7 @@ position: relative;
     }
     &::after{
         position: absolute;
-    bottom: -8px;
+    bottom: 0px;
     left: 50%;
     font-size: 20px;
     color: green;

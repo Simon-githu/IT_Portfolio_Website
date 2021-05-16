@@ -18,32 +18,24 @@ function Services() {
     }
     
     return (    
-<ServicesSection class="services" id="services">
-    <MaxWidth class="max-width">
-        <Title class="title" >My services</Title>
+<ServicesSection  id="services">
+    <MaxWidth >
+        <Title >My services</Title>
         <ServicesContent >
             <Card onMouseEnter={()=>setFaCodeColor('#fff')} onMouseLeave={()=>setFaCodeColor('green')}>
-                <CardBox class="box">
+                <CardBox >
                     <FaCode style={FaCodeStyle}/>
                     <CardText class="text" >Web Development</CardText>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
                 </CardBox>
             </Card>
             
-            <CardMobile  onMouseEnter={()=>setFaMobileColor('#fff')} onMouseLeave={()=>setFaMobileColor('green')}>
-                <CardMobileBox class="box">
+            <Card  onMouseEnter={()=>setFaMobileColor('#fff')} onMouseLeave={()=>setFaMobileColor('green')}>
+                <CardBox >
                    <FaMobile
                       style={FaMobileStyle} 
                    />
-                    <CardMobileText class="text">Mobile Development</CardMobileText>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
-                </CardMobileBox>
-            </CardMobile>
-            
-            <Card onMouseEnter={()=>setFaCodeColor('#fff')} onMouseLeave={()=>setFaCodeColor('green')}>
-                <CardBox class="box">
-                    <FaCode style={FaCodeStyle}/>
-                    <CardText class="text" >Api Development</CardText>
+                    <CardText class="text">Mobile Development</CardText>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
                 </CardBox>
             </Card>
@@ -66,9 +58,7 @@ const ServicesSection =styled.section`
     padding: 100px 0;
 `;
 const MaxWidth =styled.div`
- max-width: 1300px;
-    padding: 0 80px;
-    margin: auto;
+ 
     @media (max-width: 991px) {
     
     padding: 0 50px;
@@ -91,11 +81,11 @@ const Title =styled.h2`
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
     color:#fff;
-   
+   overflow: hidden;
 &::before{
     content: "";
     position: absolute;
-    bottom: 0px;
+    bottom: 8px;
     left: 50%;
     width: 180px;
     height: 3px;
@@ -104,7 +94,7 @@ const Title =styled.h2`
 }
 &::after{
     position: absolute;
-    bottom: -8px;
+    bottom: 0px;
     left: 50%;
     font-size: 20px;
     color: green;
@@ -134,7 +124,7 @@ const Card=styled.div`
     padding: 20px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-left: 200px;
+  
 &:hover{
     background: green;
 ${CardBox}{
@@ -154,50 +144,13 @@ ${CardBox}{
 }
 
 `;
-const CardMobileBox=styled.div`
-transition: all 0.3s ease;
-
-`;
 
 const CardText=styled.div`
  font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 `;
-const CardMobileText=styled.div`
-font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-`;
-const CardMobile=styled.div`
- width: calc(33% - 20px);
-    background: #222;
-    text-align: center;
-    border-radius: 6px;
-    padding: 20px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-right: 200px;
 
-    &:hover{
-    background: green;
-    ${CardMobileBox}{
-        transform: scale(1.05);
-    }
-}
-&:hover ${CardMobileBox}{
-    transition: all 0.3s ease;
-}
-@media(max-width:947px){
-    width: calc(50% - 10px);
-        margin-bottom: 20px;
-}
-@media (max-width: 690px) {
-    
-    width:100%;
-}
-
-`;
 
 
 

@@ -61,6 +61,7 @@ export default Skills
 const SkillsSection = styled.div`
 font-family: 'Poppins', sans-serif;
 padding: 100px 0;
+
 `;
 const MaxWidth = styled.div`
  max-width: 1300px;
@@ -92,11 +93,11 @@ const Title = styled.h2`
     margin-bottom: 60px;
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
-
+    overflow-y: hidden;
     &::before{
     content: "";
     position: absolute;
-    bottom: 0px;
+    bottom: 8px;
     left: 50%;
     width: 180px;
     height: 3px;
@@ -105,7 +106,7 @@ const Title = styled.h2`
 }
 &::after{
     position: absolute;
-    bottom: -8px;
+    bottom: 0px;
     left: 50%;
     font-size: 20px;
     color: green;

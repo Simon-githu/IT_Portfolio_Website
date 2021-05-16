@@ -224,7 +224,7 @@ text-align: center;
     opacity:${props=>props.defaultChecked?'1':'0'} ;
     pointer-events: ${props=>props.defaultChecked?'auto':'none'};
     transition: all 0.3s ease;
-
+    overflow-y: hidden;
     &:hover{
         filter:brightness(90%)
     }

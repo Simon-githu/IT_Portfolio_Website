@@ -78,6 +78,7 @@ export default Contact
 const ContactSection=styled.div`
  padding: 100px 0;
  font-family: 'Poppins', sans-serif;
+ 
 `;
 const MaxWidth=styled.div`
 max-width: 1300px;
@@ -103,19 +104,21 @@ position: relative;
     margin-bottom: 60px;
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
+    overflow-y: hidden;
     &::before{
     content: "";
     position: absolute;
-    bottom: 0px;
+    bottom: 8px;
     left: 50%;
     width: 180px;
     height: 3px;
     background: #111;
     transform: translateX(-50%);
+
 }
 &::after{
     position: absolute;
-    bottom: -8px;
+    bottom: 0px;
     left: 50%;
     font-size: 20px;
     color: green;
@@ -136,6 +139,8 @@ const Form = styled.form``;
 const ButtonDiv=styled.div`
    height: 47px;
     width: 170px;
+    overflow-y: hidden;
+    margin-top:10px
 `;
 const Button =styled.button`
  width: 100%;
@@ -150,6 +155,7 @@ const Button =styled.button`
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 15px;
+    
     &:hover{
         color: green;
     background: none;
@@ -158,6 +164,7 @@ const Button =styled.button`
 const FieldTextArea=styled.div`
  height: 80px;
     width: 100%;
+    overflow-y: hidden;
 `;
 const TextArea =styled.textarea`
  height: 100%;
@@ -223,6 +230,7 @@ const InputSubject =styled.input`
     font-size: 17px;
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
+   
     &:focus{
         border-color: green;}
 `;

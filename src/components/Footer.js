@@ -23,6 +23,7 @@ const Span =styled.span`
     text-decoration: none;
 `;
 const Link =styled.a`
+color:white;
 &:hover{
     text-decoration: underline;
 }

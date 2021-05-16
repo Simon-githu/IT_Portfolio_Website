@@ -9,30 +9,30 @@ function Teams() {
     ];
     return (
         
-    <TeamsSection class="teams" id="teams">
-    <MaxWidth class="max-width">
+    <TeamsSection  id="teams">
+    <MaxWidth >
         <Title class="title">My teams</Title>
         <Carousel 
         showArrows="true"
        
         breakPoints={breakPoints}>
-            <Card class="card">
-                <Box class="box">
+            <Card >
+                <Box >
                     <Image src="../images/profile-1.jpg" alt=""/>
                     <Text class="text">Simon Baloi</Text>
                     <Paragraph>Freelance Developer</Paragraph>
                     <Paragraph>0814754456</Paragraph>
                 </Box>
             </Card>
-            <Card class="card">
-                <Box class="box">
+            <Card >
+                <Box >
                     <Image src="images/profile-2.jpeg" alt=""/>
                     <Text class="text">Someone name</Text>
                     <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Paragraph>
                 </Box>
             </Card>
-            <Card class="card">
-                <Box class="box">
+            <Card >
+                <Box >
                     <Image src="images/profile-3.jpeg" alt=""/>
                     <Text class="text">Someone name</Text>
                     <Paragraph>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Paragraph>
@@ -53,21 +53,24 @@ const TeamsSection =styled.div`
   font-family: 'Poppins', sans-serif;
   background: #111;
   color: #fff;
+  @media (max-width: 991px) {
+width: 100%;
+
+}
 `;
 const MaxWidth =styled.div`
- max-width: 1300px;
+    width: 100%;
     padding: 0 80px;
     margin: auto;
     @media (max-width: 991px) {
-    
-    padding: 0 50px;
+
+    padding: 0 ;
+
 }
-@media (max-width:947px){
-    max-width: 930px;
-}
+
 @media (max-width: 690px) {
     
-    padding: 0 23px;
+    
 }
 `;
 const Title =styled.h2`
@@ -78,11 +81,11 @@ position: relative;
     margin-bottom: 60px;
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
-
+    overflow-y: hidden;
     &::before{
     content: "";
     position: absolute;
-    bottom: 0px;
+    bottom: 8px;
     left: 50%;
     width: 180px;
     height: 3px;
@@ -91,7 +94,7 @@ position: relative;
 }
 &::after{
     position: absolute;
-    bottom: -8px;
+    bottom: 0px;
     left: 50%;
     font-size: 20px;
     color: green;
@@ -109,6 +112,7 @@ const Image =styled.img`
     border-radius: 50%;
     border: 5px solid green;
     transition: all 0.3s ease;
+    overflow: hidden;
 `;
 const Card = styled.div`
  background: #222;

@@ -17,7 +17,7 @@ function Home() {
     <MaxWidth>
         <HomeContent class="home-content">
             <Text1 class="text-1">Hello, my name is</Text1>
-            <Text2 class="text-2">Phillip Sibiya</Text2>
+            <Text2 class="text-2">Simon Baloi</Text2>
             <Text3 class="text-3">And I'm a <span class="typing"></span></Text3>
             <a href="#">Hire me</a>
         </HomeContent>
@@ -30,7 +30,7 @@ function Home() {
 export default Home
 const HomeSection = styled.section`
     display: flex;
-    background: url("images/bg.jpg") no-repeat center;
+    background: url("images/simon.png") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -38,8 +38,9 @@ const HomeSection = styled.section`
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
     padding: 100px 0;
-   
+   @media (max-width:947px){
 
+   }
     
 `;
 const MaxWidth = styled.div`
@@ -53,8 +54,9 @@ const MaxWidth = styled.div`
 @media (max-width: 991px) {
         padding: 0 50px;
     }    
-@media(min-width:947px){
+@media(max-width:947px){
     max-width: 930px;
+    
 }
 @media (max-width: 690px) {
     
